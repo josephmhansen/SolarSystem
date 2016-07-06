@@ -107,15 +107,15 @@
 		68816A7A1BBB3591000569CE /* SolarSystem */ = {
 			isa = PBXGroup;
 			children = (
+				68816A841BBB3591000569CE /* LaunchScreen.storyboard */,
 				68816A7B1BBB3591000569CE /* AppDelegate.swift */,
 				68816A7D1BBB3591000569CE /* ViewController.swift */,
-				68816A7F1BBB3591000569CE /* Main.storyboard */,
-				68816AA91BBB35E8000569CE /* PlanetController.swift */,
-				68816AAA1BBB35E8000569CE /* Planet.swift */,
-				68816A821BBB3591000569CE /* Assets.xcassets */,
-				68816A841BBB3591000569CE /* LaunchScreen.storyboard */,
 				726CCA751D231A840028176C /* PlanetListViewController.swift */,
 				726CCA771D232A470028176C /* PlanetDetailViewController.swift */,
+				68816AA91BBB35E8000569CE /* PlanetController.swift */,
+				68816AAA1BBB35E8000569CE /* Planet.swift */,
+				68816A7F1BBB3591000569CE /* Main.storyboard */,
+				68816A821BBB3591000569CE /* Assets.xcassets */,
 				68816A871BBB3591000569CE /* Info.plist */,
 			);
 			path = SolarSystem;
