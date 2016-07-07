@@ -20,14 +20,14 @@ class PlanetListViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return
+//    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return PlanetController.planets.count
     }
     
     
@@ -85,14 +85,30 @@ class PlanetListViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+//        how are we getting there?
+//        where are we going?
+//        what do i need to bring? where is it now?
+//        did i arrive?
+        
+        if segue.identifier == "toPlanetDetail" {
+            let detailVC = segue.destinationViewController as? PlanetDetailViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let planet = PlanetController.planets[indexPath.row]
+                detailVC?.planet = planet
+                
+            }
+            
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

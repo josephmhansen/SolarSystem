@@ -8,21 +8,37 @@
         <!--Planet List View Controller-->
         <scene sceneID="t4P-Gz-jKR">
             <objects>
-                <tableViewController id="F9V-xK-sn5" customClass="PlanetListViewController" sceneMemberID="viewController">
+                <tableViewController id="F9V-xK-sn5" customClass="PlanetListViewController" customModule="SolarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="S77-GZ-I6h">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="planetCell" id="Fcp-x6-evK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="planetCell" textLabel="uSN-7g-ME5" detailTextLabel="nVD-hm-GKq" style="IBUITableViewCellStyleValue1" id="Fcp-x6-evK">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fcp-x6-evK" id="N74-fo-Iie">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uSN-7g-ME5">
+                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nVD-hm-GKq">
+                                            <rect key="frame" x="529" y="12" width="56" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Cdn-cf-Qzd" kind="show" id="Scp-gb-2gM"/>
+                                    <segue destination="Cdn-cf-Qzd" kind="show" identifier="toPlanetDetail" id="Scp-gb-2gM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -35,12 +51,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HjT-KA-v7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560" y="464"/>
+            <point key="canvasLocation" x="1545" y="464"/>
         </scene>
         <!--Planet Detail View Controller-->
         <scene sceneID="Vfg-k0-5DU">
             <objects>
-                <viewController id="Cdn-cf-Qzd" customClass="PlanetDetailViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6f6-GI-mEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Cdn-cf-Qzd" customClass="PlanetDetailViewController" customModule="SolarSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rgw-Nm-Tst"/>
                         <viewControllerLayoutGuide type="bottom" id="EWy-tn-nfb"/>
@@ -53,10 +70,10 @@
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V0v-xN-BjL">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="475"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="474"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ri-HR-j7X">
-                                        <rect key="frame" x="0.0" y="475" width="560" height="21"/>
+                                        <rect key="frame" x="0.0" y="474" width="560" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -85,13 +102,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="detailPlanetDayLength" destination="0kd-QX-Luq" id="q4r-4C-fhN"/>
+                        <outlet property="detailPlanetDayLength" destination="0kd-QX-Luq" id="BIt-Xm-IgZ"/>
                         <outlet property="detailPlanetDiameter" destination="znj-4s-QH9" id="IiN-ZX-IpQ"/>
                         <outlet property="detailPlanetDistance" destination="9Ri-HR-j7X" id="piT-1C-dWm"/>
                         <outlet property="detailPlanetImage" destination="V0v-xN-BjL" id="QJ1-ik-lpZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6f6-GI-mEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2192" y="464"/>
         </scene>
